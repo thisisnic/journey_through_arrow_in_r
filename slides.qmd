@@ -41,12 +41,6 @@ format:
 
 [![Image from "Larger-Than-Memory Data Workflows with Apache Arrow" by Danielle Navarro is licensed under CC BY-ND 4.0](https://github.com/djnavarro/arrow-user2022/blob/main/img/dplyr-backend.png?raw=true)](https://arrow-user2022.netlify.app/)
 
-## dplyr bindings and function bindings
-
-* use dplyr verbs to manipulate your data
-* lots of functions implemented too
-* join to other datasets
-
 ## Demo 1
 
 Now over to Jon for a demo!
