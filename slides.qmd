@@ -70,18 +70,8 @@ open_dataset(td, format = "csv")
 
 ## When might we want to use this?
 
-* Most dplyr functionality is implemented in Arrow
-* Window functions not yet implemented, e.g. 
-
-```{r, error=TRUE}
-mtcars_arrow <- arrow_table(mtcars)
-grouped_means <- mtcars_arrow %>%
-  group_by(cyl) %>%
-  mutate(mean_cyl = mean(cyl))
-```
-```
-Warning: window functions not currently supported in Arrow; pulling data into R
-```
+* Data from multiple sources (i.e. Parquet file or Arrow Dataset and DuckDB table)
+* Functionality in one which isn't implemented in the other
 
 ## Demo 2
 
