@@ -30,14 +30,8 @@ format:
 
 -   Do all this while using dplyr syntax and familiar R functions
 
-## The Arrow format - columnar data spec
+-   ...and more!
 
-![](https://arrow.apache.org/img/simd.png)
-
-## The Arrow format - standardisation
-
-![](https://arrow.apache.org/img/copy.png)
-![](https://arrow.apache.org/img/shared.png)
 
 ## Arrow libraries
 
