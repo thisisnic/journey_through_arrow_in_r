@@ -45,24 +45,32 @@ format:
 
 Now over to Jon for a demo!
 
-# Arrow Concepts
-
-## Tables and Datasets
-
-[![© 2023 by François Michonneau (CC-BY 4.0)](https://francoismichonneau.net/images/2022-09-decision-map.webp)](https://francoismichonneau.net/2022/10/import-big-csv/)
-
-```{=html}
-<!-- 
-Tables - in-memory
-        Datasets - points to files, without pulling in yet
--->
-```
-
 ## Interoperability
 
 * zero-copy interoperability
 * pass data between R and Python
 * pass data between Arrow and DuckDB
+
+## When might we want to use this?
+
+* Most dplyr functionality is implemented in Arrow
+* Window functions not yet implemented, e.g. 
+
+```{r, echo = FALSE}
+library(arrow)
+library(dplyr)
+```
+
+
+```{r, error=TRUE}
+mtcars_arrow <- arrow_table(mtcars)
+grouped_means <- mtcars_arrow %>%
+  group_by(cyl) %>%
+  mutate(mean_cyl = mean(cyl))
+```
+```
+Warning: window functions not currently supported in Arrow; pulling data into R
+```
 
 ## Demo 2
 
