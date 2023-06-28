@@ -100,3 +100,12 @@ The Arrow for R cheatsheet is intended to be an easy-to-scan introduction to the
 
 # Get Involved!
 
+## Open an issue
+
+[![https://github.com/apache/arrow/issues/](images/issues.png)](https://github.com/apache/arrow/issues/)
+
+## Make a PR!
+
+* docs
+* cookbook
+* code
