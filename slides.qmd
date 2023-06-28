@@ -6,67 +6,84 @@ execute:
   echo: true
 format: 
   revealjs:
-    theme: simple
+    theme: white
 ---
 
 # What is Arrow?
 
-```{=html}
-<!-- 
+## What problems can you solve with Arrow?
 
+<!-- 
 Lay out the problem of having data larger than memory
+
+Larger than memory
+Multiple files
+Control over data types
+No need for cluster or DB ("deconstructed database")
+
+-->
+
+## What is Arrow?
+
+<!--     Multi-language toolbox (high level)
+ -->
+
+## The Arrow format
+
+<!-- 
 
 Lift a few bits from Neal's presentation at around 3:40: https://www.youtube.com/watch?v=zND-Wj2XPvc
 
 Common format + Columnar format + R bindings
   1:50 onwards in Danielle's https://www.youtube.com/watch?v=O42LUmJZPx0&t=180s
 
+-->
+
+## Serialisation
+
+
+## The arrow R package
+
+<!-- 
 How does this work in R?
   dplyr/dbplyr/etc
   5:00 onwards in Danielle's https://www.youtube.com/watch?v=O42LUmJZPx0&t=180s
-
-1. What is Arrow and why you might want to use it - the project, the background
-    Why?
-        Larger than memory
-        Multiple files
-        Control over data types
-        No need for cluster or DB ("deconstructed database")
-
-    Multi-language toolbox (high level)
-    Serisalisation (high level)
-    Columnar format (high level)
 -->
-```
+
 # Arrow in R
 
-```{=html}
-<!-- 
-2. What you can do with Arrow in R (practical)
-    Use dplyr syntax to manipulate datasets
-        dplyr verbs
-        dplyr functions
-        joins
-    
-    [Jon section on dplyr demo]
-    
--->
-```
+## dplyr bindings and function bindings
+<!-- at a very high level: verbs, functions, joins-->
+
+## Demo 1
+
+Now over to Jon for a demo!
+
 # Arrow Concepts
 
-```{=html}
+## Tables and Datasets
+
+[![ © 2023 by François Michonneau (CC-BY 4.0)](https://francoismichonneau.net/images/2022-09-decision-map.webp)](https://francoismichonneau.net/2022/10/import-big-csv/)
+
 <!-- 
-3. The Arrow package
-    Tables vs. Datasets
-        Tables - in-memory
+Tables - in-memory
         Datasets - points to files, without pulling in yet
-        Formats - Parquet, Arrow, and CSV (not here, but here's why)
-        Serialisation - interoperability; talk about DuckDB too
-    
-    [Jon section on DuckDB]
-
-
 -->
-```
+
+## Formats
+
+<!-- 
+Formats - Parquet, Arrow, and CSV (not here, but here's why)
+-->
+
+## Interoperability
+
+<!-- Serialisation - interoperability; talk about DuckDB too -->
+
+## Demo 2
+
+Now over to Jon for a demo!
+
 # Resources
 
 ## Docs
@@ -106,6 +123,6 @@ The Arrow for R cheatsheet is intended to be an easy-to-scan introduction to the
 
 ## Make a PR!
 
-* docs
-* cookbook
-* code
+-   docs
+-   cookbook
+-   code
