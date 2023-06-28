@@ -55,7 +55,10 @@ library(arrow)
 library(dplyr)
 ```
 ```{r, echo = FALSE}
-InMemoryDataset$create(mtcars)
+td <- tempfile()
+dir.create(td)
+write_dataset(mtcars, td, format = "csv")
+open_dataset(td, format = "csv")
 ```
 
 
