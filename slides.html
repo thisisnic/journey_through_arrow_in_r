@@ -435,6 +435,32 @@ Nic Crane, Jonathan Keane, and Steph Hazlitt
 <h2>Demo 1</h2>
 <p>Now over to Jon for a demo!</p>
 </section>
+<section id="arrow-datasets" class="slide level2">
+<h2>Arrow Datasets</h2>
+<ul>
+<li>Similar to database connections</li>
+<li>Can consist of multiple files</li>
+<li>Data not pulled into R memory until you call <code>collect()</code></li>
+</ul>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>InMemoryDataset
+mpg: double
+cyl: double
+disp: double
+hp: double
+drat: double
+wt: double
+qsec: double
+vs: double
+am: double
+gear: double
+carb: double
+
+See $metadata for additional Schema metadata</code></pre>
+</div>
+</div>
+</section>
 <section id="interoperability" class="slide level2">
 <h2>Interoperability</h2>
 <ul>
@@ -450,10 +476,10 @@ Nic Crane, Jonathan Keane, and Steph Hazlitt
 <li>Window functions not yet implemented, e.g.&nbsp;</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>mtcars_arrow <span class="ot">&lt;-</span> <span class="fu">arrow_table</span>(mtcars)</span>
-<span id="cb1-2"><a href="#cb1-2"></a>grouped_means <span class="ot">&lt;-</span> mtcars_arrow <span class="sc">%&gt;%</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>  <span class="fu">mutate</span>(<span class="at">mean_cyl =</span> <span class="fu">mean</span>(cyl))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>mtcars_arrow <span class="ot">&lt;-</span> <span class="fu">arrow_table</span>(mtcars)</span>
+<span id="cb2-2"><a href="#cb2-2"></a>grouped_means <span class="ot">&lt;-</span> mtcars_arrow <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">mutate</span>(<span class="at">mean_cyl =</span> <span class="fu">mean</span>(cyl))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>Warning: window functions not currently supported in Arrow; pulling data into R</code></pre>
 </section>

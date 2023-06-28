@@ -45,6 +45,20 @@ format:
 
 Now over to Jon for a demo!
 
+## Arrow Datasets
+
+* Similar to database connections
+* Can consist of multiple files
+* Data not pulled into R memory until you call `collect()`
+```{r, echo = FALSE}
+library(arrow)
+library(dplyr)
+```
+```{r, echo = FALSE}
+InMemoryDataset$create(mtcars)
+```
+
+
 ## Interoperability
 
 * zero-copy interoperability
@@ -55,12 +69,6 @@ Now over to Jon for a demo!
 
 * Most dplyr functionality is implemented in Arrow
 * Window functions not yet implemented, e.g. 
-
-```{r, echo = FALSE}
-library(arrow)
-library(dplyr)
-```
-
 
 ```{r, error=TRUE}
 mtcars_arrow <- arrow_table(mtcars)
