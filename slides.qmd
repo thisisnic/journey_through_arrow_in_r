@@ -24,11 +24,11 @@ format:
 
 ## What problems can you solve with Arrow?
 
--   Work with larger-than-memory data in R without needing to set up a cluster or database
+-   Work with larger-than-memory data and multifile datasets in R without needing to set up a cluster or database
 
--   Work with multifile datasets as if they were 1 dataset
+-   Pass data between R and Python, or Arrow and DuckDB without needing to copy data
 
--   Interoperability
+-   Do all this while using dplyr syntax and familiar R functions
 
 ## The Arrow format - columnar data spec
 
@@ -50,7 +50,7 @@ format:
 ## dplyr bindings and function bindings
 
 * use dplyr verbs to manipulate your data
-* lots of functions implemented to
+* lots of functions implemented too
 * join to other datasets
 
 ## Demo 1
