@@ -99,16 +99,15 @@ Now over to Jon for a demo!
 
 ## Cheatsheet
 
-[![](https://arrow.apache.org/img/20220427-arrow-r-cheatsheet-thumbnail.png)](https://github.com/apache/arrow/blob/master/r/cheatsheet/arrow-cheatsheet.pdf)
+[![https://github.com/apache/arrow/blob/main/r/cheatsheet/arrow-cheatsheet.pdf](https://arrow.apache.org/img/20220427-arrow-r-cheatsheet-thumbnail.png)](https://github.com/apache/arrow/blob/master/r/cheatsheet/arrow-cheatsheet.pdf)
 
-<https://github.com/apache/arrow/blob/main/r/cheatsheet/arrow-cheatsheet.pdf>
 
 ```{=html}
 <!-- 
 The Arrow for R cheatsheet is intended to be an easy-to-scan introduction to the Arrow R package and Arrow data structures, with getting started sections on some of the package’s main functionality. The cheatsheet includes introductory snippets on using Arrow to read and work with larger-than-memory multi-file data sets, sending and receiving data with Flight, reading data from cloud storage without downloading the data first, and more. The Arrow for R cheatsheet also directs users to the full Arrow for R package documentation and articles and the Arrow Cookbook, both full of code examples and recipes to support users build their Arrow-based data workflows. Finally, the cheatsheet debuts one of the first uses of the hot-off-the-presses Arrow hex sticker, recently made available as part of the Apache Arrow visual identity guidance.
 -->
 ```
-## UseR Tutorial
+## UseR! 2022 Tutorial
 
 [![https://arrow-user2022.netlify.app/](images/usertutorial.png)](https://arrow-user2022.netlify.app/)
 
@@ -129,3 +128,7 @@ The Arrow for R cheatsheet is intended to be an easy-to-scan introduction to the
 -   docs
 -   cookbook
 -   code
+
+# A Journey through Arrow in R
+
+![](https://github.com/djnavarro/arrow-user2022/blob/main/img/arrow-hex-dark.png?raw=true){fig-align="center"}
