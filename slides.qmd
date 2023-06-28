@@ -9,51 +9,49 @@ format:
     theme: white
 ---
 
-# What is Arrow?
+# A Journey through Arrow in R
+
+![](https://github.com/djnavarro/arrow-user2022/blob/main/img/arrow-hex-dark.png?raw=true){fig-align="center"}
+
+## Arrow
+
+
+> Apache Arrow is a multi-language toolbox for accelerated data interchange and processing.
+
+![](https://github.com/djnavarro/arrow-user2022/blob/main/img/arrow-hex-dark.png?raw=true){fig-align="center"}
+
+
 
 ## What problems can you solve with Arrow?
 
-<!-- 
-Lay out the problem of having data larger than memory
+-   Work with larger-than-memory data in R without needing to set up a cluster or database
 
-Larger than memory
-Multiple files
-Control over data types
-No need for cluster or DB ("deconstructed database")
+-   Work with multifile datasets as if they were 1 dataset
 
--->
+-   Interoperability
 
-## What is Arrow?
+## The Arrow format - columnar data spec
 
-<!--     Multi-language toolbox (high level)
- -->
+![](https://arrow.apache.org/img/simd.png)
 
-## The Arrow format
+## The Arrow format - standardisation
 
-<!-- 
+![](https://arrow.apache.org/img/copy.png)
+![](https://arrow.apache.org/img/shared.png)
 
-Lift a few bits from Neal's presentation at around 3:40: https://www.youtube.com/watch?v=zND-Wj2XPvc
+## Arrow libraries
 
-Common format + Columnar format + R bindings
-  1:50 onwards in Danielle's https://www.youtube.com/watch?v=O42LUmJZPx0&t=180s
-
--->
-
-## Serialisation
-
+[![Image from "Larger-Than-Memory Data Workflows with Apache Arrow" by Danielle Navarro is licensed under CC BY-ND 4.0](https://github.com/djnavarro/arrow-user2022/blob/main/img/arrow-libraries-structure.png?raw=true)](https://arrow-user2022.netlify.app/)
 
 ## The arrow R package
 
-<!-- 
-How does this work in R?
-  dplyr/dbplyr/etc
-  5:00 onwards in Danielle's https://www.youtube.com/watch?v=O42LUmJZPx0&t=180s
--->
-
-# Arrow in R
+[![Image from "Larger-Than-Memory Data Workflows with Apache Arrow" by Danielle Navarro is licensed under CC BY-ND 4.0](https://github.com/djnavarro/arrow-user2022/blob/main/img/dplyr-backend.png?raw=true)](https://arrow-user2022.netlify.app/)
 
 ## dplyr bindings and function bindings
-<!-- at a very high level: verbs, functions, joins-->
+
+* use dplyr verbs to manipulate your data
+* lots of functions implemented to
+* join to other datasets
 
 ## Demo 1
 
@@ -63,22 +61,20 @@ Now over to Jon for a demo!
 
 ## Tables and Datasets
 
-[![ © 2023 by François Michonneau (CC-BY 4.0)](https://francoismichonneau.net/images/2022-09-decision-map.webp)](https://francoismichonneau.net/2022/10/import-big-csv/)
+[![© 2023 by François Michonneau (CC-BY 4.0)](https://francoismichonneau.net/images/2022-09-decision-map.webp)](https://francoismichonneau.net/2022/10/import-big-csv/)
 
+```{=html}
 <!-- 
 Tables - in-memory
         Datasets - points to files, without pulling in yet
 -->
-
-## Formats
-
-<!-- 
-Formats - Parquet, Arrow, and CSV (not here, but here's why)
--->
+```
 
 ## Interoperability
 
-<!-- Serialisation - interoperability; talk about DuckDB too -->
+* zero-copy interoperability
+* pass data between R and Python
+* pass data between Arrow and DuckDB
 
 ## Demo 2
 

@@ -338,57 +338,48 @@ Nic Crane, Jonathan Keane, and Steph Hazlitt
 
 </section>
 <section>
-<section id="what-is-arrow" class="title-slide slide level1 center">
-<h1>What is Arrow?</h1>
+<section id="a-journey-through-arrow-in-r" class="title-slide slide level1 center">
+<h1>A Journey through Arrow in R</h1>
 
-</section>
+<img data-src="https://github.com/djnavarro/arrow-user2022/blob/main/img/arrow-hex-dark.png?raw=true" class="r-stretch quarto-figure-center"></section>
+<section id="arrow" class="slide level2">
+<h2>Arrow</h2>
+<blockquote>
+<p>Apache Arrow is a multi-language toolbox for accelerated data interchange and processing.</p>
+</blockquote>
+
+<img data-src="https://github.com/djnavarro/arrow-user2022/blob/main/img/arrow-hex-dark.png?raw=true" class="r-stretch quarto-figure-center"></section>
 <section id="what-problems-can-you-solve-with-arrow" class="slide level2">
 <h2>What problems can you solve with Arrow?</h2>
-<!-- 
-Lay out the problem of having data larger than memory
-
-Larger than memory
-Multiple files
-Control over data types
-No need for cluster or DB ("deconstructed database")
-
--->
+<ul>
+<li><p>Work with larger-than-memory data in R without needing to set up a cluster or database</p></li>
+<li><p>Work with multifile datasets as if they were 1 dataset</p></li>
+<li><p>Interoperability</p></li>
+</ul>
 </section>
-<section id="what-is-arrow-1" class="slide level2">
-<h2>What is Arrow?</h2>
-<!--     Multi-language toolbox (high level)
- -->
-</section>
-<section id="the-arrow-format" class="slide level2">
-<h2>The Arrow format</h2>
-<!-- 
+<section id="the-arrow-format---columnar-data-spec" class="slide level2">
+<h2>The Arrow format - columnar data spec</h2>
 
-Lift a few bits from Neal's presentation at around 3:40: https://www.youtube.com/watch?v=zND-Wj2XPvc
-
-Common format + Columnar format + R bindings
-  1:50 onwards in Danielle's https://www.youtube.com/watch?v=O42LUmJZPx0&t=180s
-
--->
+<img data-src="https://arrow.apache.org/img/simd.png" class="r-stretch"></section>
+<section id="the-arrow-format---standardisation" class="slide level2">
+<h2>The Arrow format - standardisation</h2>
+<p><img data-src="https://arrow.apache.org/img/copy.png"> <img data-src="https://arrow.apache.org/img/shared.png"></p>
 </section>
-<section id="serialisation" class="slide level2">
-<h2>Serialisation</h2>
-</section>
+<section id="arrow-libraries" class="slide level2">
+<h2>Arrow libraries</h2>
+
+<img data-src="https://github.com/djnavarro/arrow-user2022/blob/main/img/arrow-libraries-structure.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Image from “Larger-Than-Memory Data Workflows with Apache Arrow” by Danielle Navarro is licensed under CC BY-ND 4.0</p></section>
 <section id="the-arrow-r-package" class="slide level2">
 <h2>The arrow R package</h2>
-<!-- 
-How does this work in R?
-  dplyr/dbplyr/etc
-  5:00 onwards in Danielle's https://www.youtube.com/watch?v=O42LUmJZPx0&t=180s
--->
-</section></section>
-<section>
-<section id="arrow-in-r" class="title-slide slide level1 center">
-<h1>Arrow in R</h1>
 
-</section>
+<img data-src="https://github.com/djnavarro/arrow-user2022/blob/main/img/dplyr-backend.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Image from “Larger-Than-Memory Data Workflows with Apache Arrow” by Danielle Navarro is licensed under CC BY-ND 4.0</p></section>
 <section id="dplyr-bindings-and-function-bindings" class="slide level2">
 <h2>dplyr bindings and function bindings</h2>
-<!-- at a very high level: verbs, functions, joins-->
+<ul>
+<li>use dplyr verbs to manipulate your data</li>
+<li>lots of functions implemented to</li>
+<li>join to other datasets</li>
+</ul>
 </section>
 <section id="demo-1" class="slide level2">
 <h2>Demo 1</h2>
@@ -408,15 +399,13 @@ Tables - in-memory
         Datasets - points to files, without pulling in yet
 -->
 <img data-src="https://francoismichonneau.net/images/2022-09-decision-map.webp" class="r-stretch quarto-figure-center"><p class="caption">© 2023 by François Michonneau (CC-BY 4.0)</p></section>
-<section id="formats" class="slide level2">
-<h2>Formats</h2>
-<!-- 
-Formats - Parquet, Arrow, and CSV (not here, but here's why)
--->
-</section>
 <section id="interoperability" class="slide level2">
 <h2>Interoperability</h2>
-<!-- Serialisation - interoperability; talk about DuckDB too -->
+<ul>
+<li>zero-copy interoperability</li>
+<li>pass data between R and Python</li>
+<li>pass data between Arrow and DuckDB</li>
+</ul>
 </section>
 <section id="demo-2" class="slide level2">
 <h2>Demo 2</h2>
